@@ -1,11 +1,24 @@
 import React from "react";
+import { Router, Switch, Route, Link } from "react-router-dom";
+import "./App.css";
+import HomePage from "./components/HomePage";
+import Form from "./components/Form";
 
-const App = () => {
+
+
+
+
+function App() {
   return (
-    <>
-      <h1>Teknolojik Yemekler</h1>
-      <p>Burdaki kodu silip kendi headerınızı ekleyebilirsiniz</p>
-    </>
+    <div>
+      <Switch>
+        <Route exact path="/" component={HomePage} />
+        <Route exact path="/pizza" component={Form} />
+      </Switch>
+
+
+    </div>
   );
-};
+}
+
 export default App;
